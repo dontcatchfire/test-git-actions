@@ -1,4 +1,5 @@
-#NOTICE: This new code is from Gemini. Just putting it out there.
+#NOTICE: The code is still from Gemini. Still putting it out there.
+#However, the new SHAs are legit i.e. they're from checkout's and super-linter's repos
 name: Super-Linter
 
 on: push
@@ -15,13 +16,13 @@ jobs:
     steps:
       - name: Check out code
         # Replace the hash below with the exact SHA for the checkout version you want
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
         with:
           fetch-depth: 0
 
       - name: Run Super-Linter
         # Replace the hash below with the exact SHA for super-linter@v8
-        uses: super-linter/super-linter@b92721f792f381dc356ceb2dd5f563f4127a3777
+        uses: super-linter/super-linter@4ce20838b8ab83717e78138c5b3a1407148e0918
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
